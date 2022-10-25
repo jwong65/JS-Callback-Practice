@@ -21,6 +21,11 @@ document.addEventListener('keydown', function(e){
     {direction='east'}
 
 })
+//Added so the character doesn't move if any key is pushed because the direction becomes null.
+document.addEventListener('keyup', function(e){
+    direction = null
+})
+
 
 let x = 100;
 let y = 250;
