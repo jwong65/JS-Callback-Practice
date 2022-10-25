@@ -4,7 +4,7 @@ move(inventory).to(0, 0)
 const character = newImage('assets/green-character/static.gif')
 move(character).to(100, 250)
 
-let direction = null;
+let direction = 'east';
 
 let x = 100;
 let y = 250;
@@ -24,6 +24,7 @@ function moveCharacter(){
     character.style.left = x + 'px'
     character.style.bottom = y + 'px'
 }
+setInterval(moveCharacter, 1)
 
 move(newImage('assets/tree.png')).to(200, 450)
 move(newImage('assets/pillar.png')).to(350, 250)
