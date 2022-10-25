@@ -7,16 +7,33 @@ function move(element) {
     }
 
     function moveWithArrowKeys(left, bottom, callback){
+        
+        let direction=null;
+        let x= left;
+        let y= bottom;
 
+        document.addEventListener('keydown', function(e){
+            //This line skips any repeat events.
+            if (e.repeat) return;
+        
+            if(e.key ==='ArrowUp')
+            {direction = 'north'}
+            if (e.key === 'ArrowDown')
+            {direction = 'south'}
+            if(e.key==='ArrowLeft')
+            {direction = 'west'}
+            if(e.key==='ArrowRight')
+            {direction='east'}
+            callback(direction)
+        
+        })
+        
         function moveCharacter(){
 
-            let direction=null;
-            let x= left;
-            let y= bottom;
-    
             element.style.left = x + 'px'
             element.style.bottom = y + 'px'
         
+
             if(direction === 'west'){
                 x = x - 1
             }
@@ -35,21 +52,6 @@ function move(element) {
         
         setInterval(moveCharacter, 1)
 
-        document.addEventListener('keydown', function(e){
-            //This line skips any repeat events.
-            if (e.repeat) return;
-        
-            if(e.key ==='ArrowUp')
-            {direction = 'north'}
-            if (e.key === 'ArrowDown')
-            {direction = 'south'}
-            if(e.key==='ArrowLeft')
-            {direction = 'west'}
-            if(e.key==='ArrowRight')
-            {direction='east'}
-            callback(direction)
-        
-        })
         
         document.addEventListener('keyup', function(e){
             direction = null
