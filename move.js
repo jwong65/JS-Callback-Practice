@@ -48,6 +48,11 @@ function move(element) {
             {direction='east'}
         
         })
+        
+        document.addEventListener('keyup', function(e){
+            direction = null
+        })
+        
 
     }
 
