@@ -6,7 +6,7 @@ function move(element) {
         element.style.bottom = bottom + 'px'
     }
 
-    function moveWithArrowKeys(left, bottom){
+    function moveWithArrowKeys(left, bottom, callback){
 
         function moveCharacter(){
 
@@ -34,6 +34,7 @@ function move(element) {
         }
         
         setInterval(moveCharacter, 1)
+
         document.addEventListener('keydown', function(e){
             //This line skips any repeat events.
             if (e.repeat) return;
@@ -46,11 +47,13 @@ function move(element) {
             {direction = 'west'}
             if(e.key==='ArrowRight')
             {direction='east'}
+            callback(direction)
         
         })
         
         document.addEventListener('keyup', function(e){
             direction = null
+            callback(direction)
         })
         
 
