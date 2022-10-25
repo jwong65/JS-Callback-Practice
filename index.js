@@ -24,10 +24,12 @@ function handleDirections(direction){
     }
 }
 move(character).withArrowKeys(100, 250, handleDirections)
+character.style.zIndex = "1";
+//Added a character zIndex of 1 so it will be in front of the items.
 
 
 
-let direction = null;
+// let direction = null;
 
 // //keydown is whenever the user pushes a key.
 // document.addEventListener('keydown', function(e){
