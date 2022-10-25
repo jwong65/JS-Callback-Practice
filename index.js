@@ -6,50 +6,50 @@ move(character).to(100, 250)
 
 // let direction = null;
 
-//keydown is whenever the user pushes a key.
-document.addEventListener('keydown', function(e){
-    //This line skips any repeat events.
-    if (e.repeat) return;
+// //keydown is whenever the user pushes a key.
+// document.addEventListener('keydown', function(e){
+//     //This line skips any repeat events.
+//     if (e.repeat) return;
 
-    if(e.key ==='ArrowUp')
-    {direction = 'north'}
-    if (e.key === 'ArrowDown')
-    {direction = 'south'}
-    if(e.key==='ArrowLeft')
-    {direction = 'west'}
-    if(e.key==='ArrowRight')
-    {direction='east'}
+//     if(e.key ==='ArrowUp')
+//     {direction = 'north'}
+//     if (e.key === 'ArrowDown')
+//     {direction = 'south'}
+//     if(e.key==='ArrowLeft')
+//     {direction = 'west'}
+//     if(e.key==='ArrowRight')
+//     {direction='east'}
 
-})
-//Added so the character doesn't move if any key is pushed because the direction becomes null.
-document.addEventListener('keyup', function(e){
-    direction = null
-})
+// })
+// //Added so the character doesn't move if any key is pushed because the direction becomes null.
+// document.addEventListener('keyup', function(e){
+//     direction = null
+// })
 
 
 let x = 100;
 let y = 250;
-function moveCharacter(){
+// function moveCharacter(){
     
 
-    if(direction === 'west'){
-        x = x - 1
-    }
-    if(direction === 'north'){
-        y = y + 1
-    }
-    if(direction === 'east'){
-        x = x + 1
-    }
-    if(direction === 'south'){
-        y = y - 1
-    }
-    character.style.left = x + 'px'
-    character.style.bottom = y + 'px'
+//     if(direction === 'west'){
+//         x = x - 1
+//     }
+//     if(direction === 'north'){
+//         y = y + 1
+//     }
+//     if(direction === 'east'){
+//         x = x + 1
+//     }
+//     if(direction === 'south'){
+//         y = y - 1
+//     }
+//     character.style.left = x + 'px'
+//     character.style.bottom = y + 'px'
 
-}
+// }
 
-setInterval(moveCharacter, 1)
+// setInterval(moveCharacter, 1)
 
 move(newImage('assets/tree.png')).to(200, 450)
 move(newImage('assets/pillar.png')).to(350, 250)
