@@ -1,7 +1,7 @@
 const inventory = newInventory()
 move(inventory).to(0, 0)
 
-// // const character = newImage('assets/green-character/static.gif')
+// // const character = newIm`age('assets/green-character/static.gif')
 // move(character).to(100, 250)
 
 
@@ -27,7 +27,7 @@ move(character).withArrowKeys(100, 250, handleDirections)
 
 
 
-// let direction = null;
+let direction = null;
 
 // //keydown is whenever the user pushes a key.
 // document.addEventListener('keydown', function(e){
@@ -50,8 +50,8 @@ move(character).withArrowKeys(100, 250, handleDirections)
 // })
 
 
-let x = 100;
-let y = 250;
+// let x = 100;
+// let y = 250;
 // function moveCharacter(){
     
 
