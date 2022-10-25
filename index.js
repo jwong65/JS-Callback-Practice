@@ -4,7 +4,20 @@ move(inventory).to(0, 0)
 const character = newImage('assets/green-character/static.gif')
 move(character).to(100, 250)
 
-let direction = 'east';
+let direction = null;
+
+//keydown is whenever the user pushes a key.
+document.addEventListener('keydown', function(e){
+    if(e.key =='ArrowUp')
+    {direction = 'north'}
+    if (e.key == 'ArrowDown')
+    {direction = 'south'}
+    if(e.key='ArrowLeft')
+    {direction = 'west'}
+    if(e.key='ArrowRight')
+    {direction='east'}
+
+})
 
 let x = 100;
 let y = 250;
